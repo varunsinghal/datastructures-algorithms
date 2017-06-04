@@ -8,7 +8,7 @@ def fib_recurs(n: int) -> int:
 
 
 def fib_algorithm(n: int) -> int:
-    fib_list = [1, 1]
+    fib_list = [0, 1]
     for i in range(2, n + 1):
         fib_list.append(fib_list[i - 1] + fib_list[i - 2])
     return fib_list[n]
@@ -18,11 +18,11 @@ input_numbers = [35, 40, 45]
 
 for number in input_numbers:
     start_time = time.time()
-    print("Fibonaci number at %d - %d " % (number, fib_recurs(number)))
+    print("Fibonacci number at %d - %d " % (number, fib_recurs(number)))
     end_time = time.time()
     print("Time taken by naive approach: %f seconds" % (end_time - start_time))
 
     start_time = time.time()
-    print("Fibonaci number at %d - %d " % (number, fib_algorithm(number)))
+    print("Fibonacci number at %d - %d " % (number, fib_algorithm(number)))
     end_time = time.time()
     print("Time taken by efficient approach: %f seconds" % (end_time - start_time))
